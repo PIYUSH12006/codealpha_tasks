@@ -1,7 +1,7 @@
 import random
 
-from hangman_words import word_list
 from hangman_art import stages, logo
+words=["ayush","python","mysql","coding","program","software"]
 lives = 6
 
 print(logo)
@@ -19,10 +19,8 @@ correct_letters = []
 
 while not game_over:
 
-
     print(f"****************************{lives}>/6 LIVES LEFT****************************")
     guess = input("Guess a letter: ").lower()
-
 
     if guess in correct_letters:
         print(f"you have already guessed {guess}")
@@ -38,9 +36,6 @@ while not game_over:
             display += "_"
 
     print("Word to guess: " + display)
-
-
-
 
     if guess not in chosen_word:
         lives -= 1
